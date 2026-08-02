@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Question 01
+            // Create a 1D array double[] prices with values 25.5, 40.0, 33.75. Print the second price (index 1).
+            double[] prices = { 25.5, 40.0, 33.75 };
+            Console.WriteLine($"Second price: {prices[1]}");
+            #endregion
         }
     }
 }
