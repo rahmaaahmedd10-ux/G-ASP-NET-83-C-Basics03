@@ -1,4 +1,6 @@
-﻿namespace G_ASP_NET_83_C_Basics03
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace G_ASP_NET_83_C_Basics03
 {
     internal class Program
     {
@@ -18,6 +20,24 @@
             Console.WriteLine($"Shelf 1, Slot 0 copies: {shelfCopies[1, 0]}");
             #endregion
 
+            #region Question 03
+            // Write a method PrintWelcomeMessage that prints "Welcome to the Library!". Call it from Main.
+            PrintWelcomeMessage();
+            #endregion
         }
+
+        #region Methods Definitions
+
+
+        public static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
+
+        #endregion
+      
+
+
     }
 }
+
