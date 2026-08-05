@@ -57,7 +57,13 @@ namespace G_ASP_NET_83_C_Basics03
             Console.WriteLine("-----------------------------------------------------");
             #endregion
 
-
+            #region Question 08
+            // Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length afterward.
+            double[] pricesQ8 = { 25.5, 40.0 };
+            ReplaceArray(ref pricesQ8);
+            Console.WriteLine($"prices.Length after ReplaceArray: {pricesQ8.Length}");
+            Console.WriteLine("----------------------------------------------------");
+            #endregion
 
 
         }
@@ -93,6 +99,11 @@ namespace G_ASP_NET_83_C_Basics03
         public static void AddBonusPagesByRef(ref int pages)
         {
             pages += 50;
+
+        }
+        public static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
     }
 }
