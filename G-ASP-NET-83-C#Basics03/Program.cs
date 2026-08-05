@@ -72,8 +72,15 @@ namespace G_ASP_NET_83_C_Basics03
             else
             {
                 Console.WriteLine("Book not found.");
+                Console.WriteLine("----------------------------------------------------");
             }
             #endregion
+            #region Question 10
+            double total = CalculateTotal(10.5, 20.0, 15.5);
+            Console.WriteLine($"Total Price: {total}");
+            Console.WriteLine("----------------------------------------------------------");
+            #endregion
+
 
         }
 
@@ -124,6 +131,15 @@ namespace G_ASP_NET_83_C_Basics03
 
             price = 0;
             return false;
+        }
+        public static double CalculateTotal(params double[] prices)
+        {
+            double sum = 0;
+            foreach (double price in prices)
+            {
+                sum += price;
+            }
+            return sum;
         }
     }
 }
