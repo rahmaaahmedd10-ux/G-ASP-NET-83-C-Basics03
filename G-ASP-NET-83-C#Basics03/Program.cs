@@ -31,11 +31,17 @@ namespace G_ASP_NET_83_C_Basics03
             PrintBookTitle("Clean Code");
             #endregion
 
-        } 
+            #region Question 05
+            // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and print pages afterward. What do you expect to see, and why?
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine($"Pages after AddBonusPages: {pages}");
+            #endregion
+        }
 
         #region Methods Definitions
 
-        
+
         public static void PrintWelcomeMessage()
         {
             Console.WriteLine("Welcome to the Library!");
@@ -48,5 +54,9 @@ namespace G_ASP_NET_83_C_Basics03
         }
 
         #endregion
+        public static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
     }
 }
