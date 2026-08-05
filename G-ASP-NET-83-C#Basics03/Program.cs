@@ -80,7 +80,16 @@ namespace G_ASP_NET_83_C_Basics03
             Console.WriteLine($"Total Price: {total}");
             Console.WriteLine("----------------------------------------------------------");
             #endregion
+            #region Question 11
+            
+            double total1 = CalculateTotalDiscounted(100.0);
+            Console.WriteLine($"Total with default discount (5%): {total1}");
 
+            
+            double total2 = CalculateTotalDiscounted(100.0, 0.10);
+            Console.WriteLine($"Total with 10% discount: {total2}");
+            Console.WriteLine("----------------------------------------------------");
+            #endregion
 
         }
 
@@ -140,6 +149,10 @@ namespace G_ASP_NET_83_C_Basics03
                 sum += price;
             }
             return sum;
+                          }
+        public static double CalculateTotalDiscounted(double price, double discount = 0.05)
+        {
+            return price - (price * discount);
         }
     }
 }
