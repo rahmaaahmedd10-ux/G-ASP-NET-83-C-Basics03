@@ -90,6 +90,11 @@ namespace G_ASP_NET_83_C_Basics03
             Console.WriteLine($"Total with 10% discount: {total2}");
             Console.WriteLine("----------------------------------------------------");
             #endregion
+            #region Question 12
+            
+            PrintBookDetails(price: 25.5, title: "Clean Code", author: "Robert C. Martin");
+            Console.WriteLine("--------------------------------");
+            #endregion
 
         }
 
@@ -153,6 +158,10 @@ namespace G_ASP_NET_83_C_Basics03
         public static double CalculateTotalDiscounted(double price, double discount = 0.05)
         {
             return price - (price * discount);
+        }
+        public static void PrintBookDetails(string title, string author, double price)
+        {
+            Console.WriteLine($"Title: {title}, Author: {author}, Price: {price}");
         }
     }
 }
