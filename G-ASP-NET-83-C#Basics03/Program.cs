@@ -49,6 +49,14 @@ namespace G_ASP_NET_83_C_Basics03
             Console.WriteLine($"prices[0] after ApplyDiscount: {pricesQ6[0]}");
             Console.WriteLine("----------------------------------------------------");
             #endregion
+            #region Question 07
+            // Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. Call it and print pages afterward. How is the result different from question 5?
+            int pagesQ7 = 400;
+            AddBonusPagesByRef(ref pagesQ7);
+            Console.WriteLine($"Pages after AddBonusPagesByRef: {pagesQ7}");
+            Console.WriteLine("-----------------------------------------------------");
+            #endregion
+
 
 
 
@@ -62,13 +70,14 @@ namespace G_ASP_NET_83_C_Basics03
             Console.WriteLine("Welcome to the Library!");
         }
 
-        
+
         public static void PrintBookTitle(string title)
         {
             Console.WriteLine("Book title: " + title);
         }
 
         #endregion
+
         public static void AddBonusPages(int pages)
         {
             pages += 50;
@@ -80,5 +89,11 @@ namespace G_ASP_NET_83_C_Basics03
                 prices[0] -= 5;
             }
         }
+
+        public static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+        }
     }
 }
+
