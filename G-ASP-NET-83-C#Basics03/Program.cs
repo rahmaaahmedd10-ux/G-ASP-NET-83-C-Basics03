@@ -64,7 +64,16 @@ namespace G_ASP_NET_83_C_Basics03
             Console.WriteLine($"prices.Length after ReplaceArray: {pricesQ8.Length}");
             Console.WriteLine("----------------------------------------------------");
             #endregion
-
+            #region Question 09
+            if (TryGetPrice("Clean Code", out double foundPrice))
+            {
+                Console.WriteLine($"Price found: {foundPrice}");
+            }
+            else
+            {
+                Console.WriteLine("Book not found.");
+            }
+            #endregion
 
         }
 
@@ -104,6 +113,17 @@ namespace G_ASP_NET_83_C_Basics03
         public static void ReplaceArray(ref double[] prices)
         {
             prices = new double[] { 10.0, 12.5, 15.0 };
+        }
+        public static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+
+            price = 0;
+            return false;
         }
     }
 }
