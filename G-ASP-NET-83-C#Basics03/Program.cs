@@ -10,6 +10,7 @@ namespace G_ASP_NET_83_C_Basics03
             // Create a 1D array double[] prices with values 25.5, 40.0, 33.75. Print the second price (index 1).
             double[] prices = { 25.5, 40.0, 33.75 };
             Console.WriteLine($"Second price: {prices[1]}");
+            Console.WriteLine("--------------------------------------------------");
             #endregion
 
             #region Question 02
@@ -19,16 +20,19 @@ namespace G_ASP_NET_83_C_Basics03
                 { 1, 4 }
             };
             Console.WriteLine($"Shelf 1, Slot 0 copies: {shelfCopies[1, 0]}");
+            Console.WriteLine("--------------------------------------------------");
             #endregion
 
             #region Question 03
             // Write a method PrintWelcomeMessage that prints "Welcome to the Library!". Call it from Main.
             PrintWelcomeMessage();
+            Console.WriteLine("--------------------------------------------------");
             #endregion
 
             #region Question 04
             // Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with "Clean Code".
             PrintBookTitle("Clean Code");
+            Console.WriteLine("--------------------------------------------------");
             #endregion
 
             #region Question 05
@@ -36,7 +40,18 @@ namespace G_ASP_NET_83_C_Basics03
             int pages = 400;
             AddBonusPages(pages);
             Console.WriteLine($"Pages after AddBonusPages: {pages}");
+            Console.WriteLine("--------------------------------------------------");
             #endregion
+
+            #region Question 06
+            double[] pricesQ6 = { 25.5, 40.0 };
+            ApplyDiscount(pricesQ6);
+            Console.WriteLine($"prices[0] after ApplyDiscount: {pricesQ6[0]}");
+            Console.WriteLine("----------------------------------------------------");
+            #endregion
+
+
+
         }
 
         #region Methods Definitions
@@ -57,6 +72,13 @@ namespace G_ASP_NET_83_C_Basics03
         public static void AddBonusPages(int pages)
         {
             pages += 50;
+        }
+        public static void ApplyDiscount(double[] prices)
+        {
+            if (prices.Length > 0)
+            {
+                prices[0] -= 5;
+            }
         }
     }
 }
